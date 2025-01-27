@@ -1,6 +1,6 @@
 # APEX and ORDS Docker installation 
-
-# create network
+  
+# Create network
 
 docker network create apex-network
 
