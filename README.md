@@ -1,4 +1,6 @@
-# Bookkeeping ON PREMISE
+### Disclaimer
+This repository's content is primarily written in [Your Language] to better suit my workflow and communication preferences. If you encounter any difficulties understanding the material, feel free to reach out or use translation tools. Thank you for your understanding!
+
 
 # Bookkeep Database Initial set up for docker and oracle 23c free database version of oracle
 
