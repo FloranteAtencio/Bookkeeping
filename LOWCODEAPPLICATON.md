@@ -129,7 +129,7 @@ kopyahin mga nga sumusunod
 
 `ords config set standalone.http.port 8080`
 
-`ords config set standalone.http.port 8443`
+`ords config set standalone.https.port 8443`
 
 `ords config set standalone.https.cert /etc/ords/config/ssl/certificate.crt`
 
