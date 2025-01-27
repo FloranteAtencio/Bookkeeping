@@ -90,9 +90,7 @@ PASSWORD : E
 # ORDS sundin ang mga sumusunod
 mag open ng bagong terminal, kunin ang "ords latest imgage" gamit ito`docker pull container-registry.oracle.com/database/ords:latest` 
 
-at gawin ito `password.text` 
-
-i-edit ito at `cat password.text`resulta dapat ay
+at gawin ito `password.text` i-edit ito at `cat password.text`resulta dapat ay
 
 `<password of admin user or sys as sysdba>` 
 
