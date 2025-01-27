@@ -17,7 +17,6 @@ siguradihin ang docker ay nagagamit sa inyong mga "server" or "machine" sunod ay
 # 
 
 ### KUHANIN AT "EXTRACT": "Apex" 
-Pwedeng gamitin `sudo apt install unzip` para sa "extraction"
 
 `curl -o apex.zip https://download.oracle.com/otn_software/apex/apex-latest.zip`
 
@@ -55,6 +54,7 @@ MAXSIZE UNLIMITED;`
 
 ### Pag "install" Apex instance sa iyong "database"
 **kopyahin** `@apexins.sql SYSAUX SYSAUX TEMP /i/` pag natapos na ang pag "install" sunod ay ayusin ito at alingsunod sa iyong gusto "Password"
+
 `ALTER USER anonymous ACCOUNT UNLOCK;`
 
 `ALTER USER flows_files ACCOUNT UNLOCK;`
@@ -77,9 +77,7 @@ PASSWORD : E
 # 
 
 ### Ayusin ang "Proxy user"
-`@apex_rest_config.sql` i-set ang password sa "E"
-
-ayusin alin sunod sa iyong gusto
+`@apex_rest_config.sql` i-set ang password sa "E" ayusin alin sunod sa iyong gusto
 
 `ALTER USER APEX_PUBLIC_USER ACCOUNT UNLOCK; `
 
@@ -89,13 +87,10 @@ ayusin alin sunod sa iyong gusto
 
 `ALTER USER APEX_LISTENER IDENTIFIED BY "<password>";`
 
-
-# 
-
 # ORDS sundin ang mga sumusunod
-mag open ng bagong terminal, kunin ang "ords latest imgage" gamit ito`docker pull container-registry.oracle.com/database/ords:latest` at gawin ito 
+mag open ng bagong terminal, kunin ang "ords latest imgage" gamit ito`docker pull container-registry.oracle.com/database/ords:latest` 
 
-`password.text` 
+at gawin ito `password.text` 
 
 i-edit ito at `cat password.text`resulta dapat ay
 
@@ -111,6 +106,7 @@ i-edit ito at `cat password.text`resulta dapat ay
 **sunod ay** 
 
 `docker run --rm -it -d --name ords_node1 --network=apex-network -p 8080:8080 -p 8443:8443 -v ords_config:/etc/ords/config -v $(pwd)/apex/images/:/etc/ords/config/global/doc_root/i/24.1.0/images container-registry.oracle.com/database/ords:latest`
+
 **i-access ang docker bash** 
 
 **magtungo sa /etc/ords/config/** 
