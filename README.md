@@ -36,33 +36,49 @@ Ubuntu Server 24.04.1 LTS for Database and docker for container.
 
 sudo apt update
 
+
 -- Install docker
 
 sudo apt install docker.io
 
--- Create Volume for progress sudo docker volume create oracle_volume
+
+-- Create Volume for progress 
+
+docker volume create oracle_volume
+
 
 -- Download oracle inside docker this about worth 10 Gb of
 
 sudo docker run -itd --name Bookkeepeer -p 1521:1521 -e ORACLE_PWD='bookkeep123' -v oracle_volume:/opt/oracle/oradata container-registry.oracle.com/database/free:latest
 
+
+
 -- Execute sql
 
 sudo docker exec -it Bookkeepeer bash
 
+
 -- make Directory for Pluggable and Script mkdir pluggable mkdir script mkdir backup
 
--- Login as admin -- For safer way sqlplus sys@locahost:1521 as sysdba sqlplus sys/1234@localhost:1521 as sysdba
+-- Login as admin for safer way sqlplus sys@locahost:1521 as sysdba 
 
--- PLUGGABLE DATABASE CREATE PLUGGABLE DATABASE Dev_Cafe admin user keeper IDENTIFIED BY Book create_file_dest='/home/oracle/plugbookkeep';
+sqlplus sys/bookkeep123@localhost:1521 as sysdba
 
--- Set permision ALTER PLUGGABLE DATABASE Bookkeepeer OPEN; EXIT
 
--- Log in to the database -- For safer way sqlplus sys@localhost:1521/Dev_Cafe as sysdba sqlplus sys@localhost:1521/Bookkeepeer as sysdba
+PLUGGABLE DATABASE CREATE PLUGGABLE DATABASE Dev_Cafe admin user keeper IDENTIFIED BY Book create_file_dest='/home/oracle/plugbookkeep';
 
--- Grant access to Link 
+Set permision ALTER PLUGGABLE DATABASE Bookkeepeer OPEN; EXIT
+
+
+-- Log in to the database for safer way sqlplus sys@localhost:1521/Bookkeepeer as sysdba 
+
+sqlplus sys@bookkeep123localhost:1521/Bookkeepeer as sysdba
+
+
+--Grant access to Link 
 
 GRANT DBA to Keeper
+
 
 -- Production Access after the schema is created
 
@@ -76,13 +92,4 @@ GRANT prod_ROLE TO Product
 
 EXIT
 
--- DBA As Keeper (user) 
--- safe way sqlplus Link@localhost:1521/Dev_Cafe sqlplus then provide the password
 
-Keeper/Book@localhost:1521/Bookkeeper
-
--- or sqlplus 
-
-Dev_Hyrule/dev_Password@localhost:1521/Bookkeeper
-
--- copy and paste the Bookkeeper.sql
