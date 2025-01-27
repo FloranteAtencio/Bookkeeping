@@ -1,4 +1,4 @@
-### Disclaimer
+# Disclaimer
 This repository's content is primarily written in tagalog/taglish to better suit my workflow and communication preferences. If you encounter any difficulties understanding the material, feel free to reach out or use translation tools. Thank you for your understanding!
 
 
