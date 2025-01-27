@@ -120,7 +120,9 @@ i-edit ito at `cat password.text`resulta dapat ay
 kopyahin at may mga ilang dapat sagutan
 
 `openssl genpkey -algorithm RSA -out private.key -pkeyopt rsa_keygen_bits:2048`
+
 `openssl req -new -key private.key -out csr.csr`.
+
 `openssl x509 -req -in csr.csr -signkey private.key -out certificate.crt -days 365`
 
 kopyahin mga nga sumusunod
