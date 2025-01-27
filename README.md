@@ -25,25 +25,26 @@ Each PDB is a self-contained database with its own schemas and objects.
 
 Ubuntu Server 24.04.1 LTS for Database and docker for container.
 
-#Coder start here in Linux 
+# Coder start here in Linux 
 ### Update server
 sudo apt update
-
+# 
 
 ###  Install docker
 sudo apt install docker.io
-
+# 
 
 ### Create Volume for progress 
 docker volume create oracle_volume
-
+# 
 
  ###  Download oracle inside docker this about worth 10 Gb of
 sudo docker run -itd --name Bookkeepeer -p 1521:1521 -e ORACLE_PWD='bookkeep123' -v oracle_volume:/opt/oracle/oradata container-registry.oracle.com/database/free:latest
+# 
 
  ###  Execute sql
 sudo docker exec -it Bookkeepeer bash
-
+# 
 
 ###  Login as admin 
 sqlplus sys/bookkeep123@localhost:1521 as sysdba
@@ -55,15 +56,15 @@ ALTER PLUGGABLE DATABASE Bookkeepeer OPEN;
 ALTER PLUGGABLE DATABASE Bookkeepeer SAVE STATE; 
 
 EXIT
-
+# 
 
  ###  Log in to the database
 sqlplus sys@bookkeep123localhost:1521/Bookkeepeer as sysdba
-
+# 
 
  ### Grant access to Link 
 GRANT DBA to Keeper
-
+# 
 
  ###  Production Access after the schema is created
 CREATE ROLE prod_ROL;
