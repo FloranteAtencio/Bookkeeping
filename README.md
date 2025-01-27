@@ -1,7 +1,3 @@
-# Disclaimer
-This repository's content is primarily written in tagalog/taglish to better suit my workflow and communication preferences. Thank you for your understanding!
-
-
 ### Bookkeep Database Initial set up for docker and oracle 23c free database version of oracle
 
 --- Introduction ----------
