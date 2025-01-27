@@ -57,9 +57,7 @@ sudo docker run -itd --name Bookkeepeer -p 1521:1521 -e ORACLE_PWD='bookkeep123'
 sudo docker exec -it Bookkeepeer bash
 
 
- #  make Directory for Pluggable and Script mkdir pluggable mkdir script mkdir backup
-
- #  Login as admin for safer way sqlplus sys@locahost:1521 as sysdba 
+#  Login as admin 
 
 sqlplus sys/bookkeep123@localhost:1521 as sysdba
 
@@ -73,7 +71,7 @@ ALTER PLUGGABLE DATABASE Bookkeepeer SAVE STATE;
 EXIT
 
 
- #  Log in to the database for safer way sqlplus sys@localhost:1521/Bookkeepeer as sysdba 
+ #  Log in to the database
 
 sqlplus sys@bookkeep123localhost:1521/Bookkeepeer as sysdba
 
