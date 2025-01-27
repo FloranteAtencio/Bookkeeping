@@ -66,7 +66,11 @@ sqlplus sys/bookkeep123@localhost:1521 as sysdba
 
 PLUGGABLE DATABASE CREATE PLUGGABLE DATABASE Dev_Cafe admin user keeper IDENTIFIED BY Book create_file_dest='/home/oracle/plugbookkeep';
 
-Set permision ALTER PLUGGABLE DATABASE Bookkeepeer OPEN; EXIT
+ALTER PLUGGABLE DATABASE Bookkeepeer OPEN; 
+
+ALTER PLUGGABLE DATABASE Bookkeepeer SAVE STATE; 
+
+EXIT
 
 
  #  Log in to the database for safer way sqlplus sys@localhost:1521/Bookkeepeer as sysdba 
