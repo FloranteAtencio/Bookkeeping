@@ -76,7 +76,7 @@ PASSWORD : E
 
 # 
 
-### ayusing and "Proxy user"
+### Ayusin ang "Proxy user"
 `@apex_rest_config.sql` i-set ang password sa "E"
 
 ayusin alin sunod sa iyong gusto
@@ -138,7 +138,3 @@ kopyahin mga nga sumusunod
 `ords config set standalone.https.cert /etc/ords/config/ssl/certificate.crt`
 
 `ords config set standalone.https.cert.key /etc/ords/config/ssl/private.key`
-
-
-
-
