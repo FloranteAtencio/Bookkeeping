@@ -1,6 +1,6 @@
 # Bookkeeping ON PREMISE
 
-# Cafe Database Initial set up for docker and oracle 23c free database version of oracle
+# Bookkeep Database Initial set up for docker and oracle 23c free database version of oracle
 
 --- Introduction ----------
 
@@ -49,8 +49,6 @@ docker volume create oracle_volume
  #  Download oracle inside docker this about worth 10 Gb of
 
 sudo docker run -itd --name Bookkeepeer -p 1521:1521 -e ORACLE_PWD='bookkeep123' -v oracle_volume:/opt/oracle/oradata container-registry.oracle.com/database/free:latest
-
-
 
  #  Execute sql
 
