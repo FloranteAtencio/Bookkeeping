@@ -1,3 +1,6 @@
+## Disclaimer  
+This project is for **testing and learning purposes only**. 
+
 ### Bookkeep Database Initial set up for docker and oracle 23c free database version of oracle
 Oracle 23c Structure
 
