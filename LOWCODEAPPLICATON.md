@@ -3,7 +3,8 @@
 
 ### Disclaimer
 This repository's content is primarily written in tagalog/taglish to better suit my workflow and communication preferences. If you encounter any difficulties understanding the material, feel free to reach out or use translation tools. Thank you for your understanding!
-This is for **testing and learning purposes only**. It is not intended for production use, and I make no guarantees regarding its reliability, security, or performance. Use at your own risk.  
+
+This is for **testing or learning purposes only**. It is not intended for production use, and I make no guarantees regarding its reliability, security, or performance. Use at your own risk.  
 
 # 
 
