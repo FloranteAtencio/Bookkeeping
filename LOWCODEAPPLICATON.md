@@ -1,4 +1,4 @@
-# APEX and ORDS Docker on Linux OS installation 
+# APEX and ORDS
 # 
 
 ### Disclaimer
